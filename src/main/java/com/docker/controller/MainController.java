@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
+    public static final String HELLO_MESSAGE = "Hello im docker container! :)";
+
     @GetMapping
     public ResponseEntity<ResponseMessageDto> helloDocker() {
-        return ResponseEntity.ok(new ResponseMessageDto("Hello im docker container! :)"));
+        return ResponseEntity.ok(new ResponseMessageDto(HELLO_MESSAGE));
     }
-
 }
